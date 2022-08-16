@@ -23,6 +23,13 @@ pagination = driver.find_element_by_xpath("//ul[contains(@class,'pagingElements'
 pages = pagination.find_elements_by_tag_name('li')
 last_page = int(pages[-2].text)
 
+#acepto los terminos
+try:
+    driver.find_element_by_id('truste-consent-button').click()
+except:
+    pass
+
+
 print(last_page)
 
 current_page = 1
@@ -57,10 +64,7 @@ while current_page <= last_page:
 
     current_page = current_page + 1
     
-    try:
-        driver.find_element_by_id('truste-consent-button').click()
-    except:
-        pass
+    
     
     try:
         next_page = driver.find_element_by_xpath("//span[contains(@class,'nextButton')]")
