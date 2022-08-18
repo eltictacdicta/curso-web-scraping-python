@@ -23,3 +23,4 @@ class ParascrapearSpider(scrapy.Spider):
         df_frases = pd.DataFrame({"Frases":frases_lista})
         df_frases.to_csv("frases.csv",index=False)
     
+# Para la ejecución en este tutorial se ha usado el siguiente comando: scrapy runspider --nolog parascrapear.py
