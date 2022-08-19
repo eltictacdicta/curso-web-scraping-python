@@ -23,7 +23,7 @@ class AudibleSpider(scrapy.Spider):
                 'title':book_title,
                 'author':book_author,
                 'length':book_len,
-                #'User-Agent':response.request.headers['User-Agent'],
+                'User-Agent':response.request.headers['User-Agent'],
             }
 
 
